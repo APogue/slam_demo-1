@@ -1,2 +1,6 @@
 build/*
 misc/*
+
+cmake-build-debug/sim_easy/CMakeFiles/sim_easy_em_app.dir/
+
+.idea/

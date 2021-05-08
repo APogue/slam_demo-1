@@ -226,7 +226,7 @@ class ExpLandmarkEmSLAM {
           }
 
           Eigen::Quaterniond init_rotation(init_q[0], init_q[1], init_q[2], init_q[3]);
-          state_vec_.at(i)->GetRotationBlock()->setEstimate(quat_postive(init_rotation));
+          state_vec_.at(i)->GetRotationBlock()->setEstimate(quat_positive(init_rotation));
 
           // velocity
           double init_v[3];
@@ -567,7 +567,7 @@ class ExpLandmarkEmSLAM {
       state_estimate.at(i) = new Estimate;
 
       // time update
-      Eigen::Quaterniond q0 = quat_postive(state_vec_.at(i)->GetRotationBlock()->estimate());
+      Eigen::Quaterniond q0 = quat_positive(state_vec_.at(i)->GetRotationBlock()->estimate());
       Eigen::Vector3d v0 = state_vec_.at(i)->GetVelocityBlock()->estimate();
       Eigen::Vector3d p0 = state_vec_.at(i)->GetPositionBlock()->estimate();
 
@@ -588,7 +588,7 @@ class ExpLandmarkEmSLAM {
 
       // double kf_constant = 0.1;
       double kf_constant = 0.3;
-      state_estimate.at(i)->q_ = quat_postive(state_vec_.at(i+1)->GetRotationBlock()->estimate() * Exp_q(kf_constant * imu_dq));
+      state_estimate.at(i)->q_ = quat_positive(state_vec_.at(i+1)->GetRotationBlock()->estimate() * Exp_q(kf_constant * imu_dq));
       state_estimate.at(i)->v_ = state_vec_.at(i+1)->GetVelocityBlock()->estimate() + kf_constant * imu_dv;
       state_estimate.at(i)->p_ = state_vec_.at(i+1)->GetPositionBlock()->estimate() + kf_constant * imu_dp;
 
@@ -678,7 +678,7 @@ class ExpLandmarkEmSLAM {
       // if (k_p.norm() < 0.7) {
       if (1) {   // maybe 1.0
 
-        state_estimate.at(i)->q_ = quat_postive(Eigen::Quaterniond(state_estimate.at(i)->q_ * k_R));
+        state_estimate.at(i)->q_ = quat_positive(Eigen::Quaterniond(state_estimate.at(i)->q_ * k_R));
         state_estimate.at(i)->v_ = state_estimate.at(i)->v_ + k_v;
         state_estimate.at(i)->p_ = state_estimate.at(i)->p_ + k_p;
 
@@ -735,7 +735,7 @@ class ExpLandmarkEmSLAM {
       // std::cout << m << std::endl;
       // std::cin.get();
 
-      state_estimate.at(i)->q_ = quat_postive(Eigen::Quaterniond(state_estimate.at(i)->q_ * Exp(m.block<3,1>(0,0))));
+      state_estimate.at(i)->q_ = quat_positive(Eigen::Quaterniond(state_estimate.at(i)->q_ * Exp(m.block<3,1>(0,0))));
       state_estimate.at(i)->v_ = state_estimate.at(i)->v_ + m.block<3,1>(3,0);
       state_estimate.at(i)->p_ = state_estimate.at(i)->p_ + m.block<3,1>(6,0);
 
