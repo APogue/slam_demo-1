@@ -375,12 +375,13 @@ int main(int argc, char **argv) {
   int num_real = atoi(argv[1]);
 
   for (size_t i = 0; i < num_real; ++i) {
+    Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
     ExpLandmarkBoemSLAM slam_problem("config/config_sim.yaml");
     slam_problem.CreateTrajectory();
-    slam_problem.CreateLandmark();
+    slam_problem.CreateLandmark(urng);
 
-    slam_problem.CreateImuData();
-    slam_problem.CreateObservationData();
+    slam_problem.CreateImuData(urng);
+    slam_problem.CreateObservationData(urng);
 
 
     slam_problem.InitializeSLAMProblem();
