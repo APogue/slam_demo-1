@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPEAT_VAR="50"
+REPEAT_VAR="2"
 
 ./build/sim/sim_vis/sim_vis $REPEAT_VAR
 ./build/sim/sim_vis/sim_opt_vis $REPEAT_VAR

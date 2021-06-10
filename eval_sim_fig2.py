@@ -5,8 +5,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-
-
 plot_color = {
 	'gt': [0, 0, 0],
 	'dr': [0.0000, 0.5490, 0.3765],
@@ -150,6 +148,7 @@ def plot_with_std():
 	ax2.legend(loc = 1)
 	ax2.set_ylim(-0.01, 0.4)
 	return plt.show()
+
 
 plot_no_std()
 plot_with_std()
