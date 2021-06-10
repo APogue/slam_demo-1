@@ -18,3 +18,4 @@ REPEAT_VAR="2"
 
 #python sim_eval.py
 python eval_sim_fig2.py $REPEAT_VAR
+
