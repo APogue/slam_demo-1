@@ -75,6 +75,8 @@ CMAKE_BINARY_DIR = /home/alexie/Documents/slam_demo-1/cmake-build-debug
 # The main recursive "all" target.
 all: lib/all
 all: sim/all
+all: sim_vis_fixed/all
+all: sim_vis_win/all
 all: exp/all
 all: test/all
 
@@ -83,6 +85,8 @@ all: test/all
 # The main recursive "preinstall" target.
 preinstall: lib/preinstall
 preinstall: sim/preinstall
+preinstall: sim_vis_fixed/preinstall
+preinstall: sim_vis_win/preinstall
 preinstall: exp/preinstall
 preinstall: test/preinstall
 
@@ -91,6 +95,8 @@ preinstall: test/preinstall
 # The main recursive "clean" target.
 clean: lib/clean
 clean: sim/clean
+clean: sim_vis_fixed/clean
+clean: sim_vis_win/clean
 clean: exp/clean
 clean: test/clean
 
@@ -167,6 +173,50 @@ sim/clean: sim/CMakeFiles/sim_em_app.dir/clean
 sim/clean: sim/CMakeFiles/sim_boem_app.dir/clean
 
 .PHONY : sim/clean
+
+#=============================================================================
+# Directory level rules for directory sim_vis_fixed
+
+# Recursive "all" directory target.
+sim_vis_fixed/all: sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/all
+sim_vis_fixed/all: sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/all
+sim_vis_fixed/all: sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/all
+
+.PHONY : sim_vis_fixed/all
+
+# Recursive "preinstall" directory target.
+sim_vis_fixed/preinstall:
+
+.PHONY : sim_vis_fixed/preinstall
+
+# Recursive "clean" directory target.
+sim_vis_fixed/clean: sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/clean
+sim_vis_fixed/clean: sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/clean
+sim_vis_fixed/clean: sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/clean
+
+.PHONY : sim_vis_fixed/clean
+
+#=============================================================================
+# Directory level rules for directory sim_vis_win
+
+# Recursive "all" directory target.
+sim_vis_win/all: sim_vis_win/CMakeFiles/sim_boem_win.dir/all
+sim_vis_win/all: sim_vis_win/CMakeFiles/sim_em_win.dir/all
+sim_vis_win/all: sim_vis_win/CMakeFiles/sim_opt_win.dir/all
+
+.PHONY : sim_vis_win/all
+
+# Recursive "preinstall" directory target.
+sim_vis_win/preinstall:
+
+.PHONY : sim_vis_win/preinstall
+
+# Recursive "clean" directory target.
+sim_vis_win/clean: sim_vis_win/CMakeFiles/sim_boem_win.dir/clean
+sim_vis_win/clean: sim_vis_win/CMakeFiles/sim_em_win.dir/clean
+sim_vis_win/clean: sim_vis_win/CMakeFiles/sim_opt_win.dir/clean
+
+.PHONY : sim_vis_win/clean
 
 #=============================================================================
 # Directory level rules for directory test
@@ -284,7 +334,7 @@ sim/CMakeFiles/sim_opt_app.dir/all: lib/CMakeFiles/EigenRand.dir/all
 sim/CMakeFiles/sim_opt_app.dir/all: lib/CMakeFiles/lib.dir/all
 	$(MAKE) $(MAKESILENT) -f sim/CMakeFiles/sim_opt_app.dir/build.make sim/CMakeFiles/sim_opt_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f sim/CMakeFiles/sim_opt_app.dir/build.make sim/CMakeFiles/sim_opt_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target sim_opt_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=37,38 "Built target sim_opt_app"
 .PHONY : sim/CMakeFiles/sim_opt_app.dir/all
 
 # Build rule for subdir invocation for target.
@@ -312,7 +362,7 @@ sim/CMakeFiles/sim_em_app.dir/all: lib/CMakeFiles/EigenRand.dir/all
 sim/CMakeFiles/sim_em_app.dir/all: lib/CMakeFiles/lib.dir/all
 	$(MAKE) $(MAKESILENT) -f sim/CMakeFiles/sim_em_app.dir/build.make sim/CMakeFiles/sim_em_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f sim/CMakeFiles/sim_em_app.dir/build.make sim/CMakeFiles/sim_em_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target sim_em_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target sim_em_app"
 .PHONY : sim/CMakeFiles/sim_em_app.dir/all
 
 # Build rule for subdir invocation for target.
@@ -359,6 +409,168 @@ sim_boem_app: sim/CMakeFiles/sim_boem_app.dir/rule
 sim/CMakeFiles/sim_boem_app.dir/clean:
 	$(MAKE) $(MAKESILENT) -f sim/CMakeFiles/sim_boem_app.dir/build.make sim/CMakeFiles/sim_boem_app.dir/clean
 .PHONY : sim/CMakeFiles/sim_boem_app.dir/clean
+
+#=============================================================================
+# Target rules for target sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir
+
+# All Build rule for target.
+sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/all: lib/CMakeFiles/lib.dir/all
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/depend
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=39,40 "Built target sim_opt_fixed"
+.PHONY : sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/all
+
+# Build rule for subdir invocation for target.
+sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 0
+.PHONY : sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/rule
+
+# Convenience name for target.
+sim_opt_fixed: sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/rule
+
+.PHONY : sim_opt_fixed
+
+# clean rule for target.
+sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/clean:
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/clean
+.PHONY : sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/clean
+
+#=============================================================================
+# Target rules for target sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir
+
+# All Build rule for target.
+sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/all: lib/CMakeFiles/lib.dir/all
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/depend
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target sim_boem_fixed"
+.PHONY : sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/all
+
+# Build rule for subdir invocation for target.
+sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 0
+.PHONY : sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/rule
+
+# Convenience name for target.
+sim_boem_fixed: sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/rule
+
+.PHONY : sim_boem_fixed
+
+# clean rule for target.
+sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/clean:
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/clean
+.PHONY : sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/clean
+
+#=============================================================================
+# Target rules for target sim_vis_fixed/CMakeFiles/sim_em_fixed.dir
+
+# All Build rule for target.
+sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/all: lib/CMakeFiles/lib.dir/all
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/depend
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=33,34 "Built target sim_em_fixed"
+.PHONY : sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/all
+
+# Build rule for subdir invocation for target.
+sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 0
+.PHONY : sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/rule
+
+# Convenience name for target.
+sim_em_fixed: sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/rule
+
+.PHONY : sim_em_fixed
+
+# clean rule for target.
+sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/clean:
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/clean
+.PHONY : sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/clean
+
+#=============================================================================
+# Target rules for target sim_vis_win/CMakeFiles/sim_boem_win.dir
+
+# All Build rule for target.
+sim_vis_win/CMakeFiles/sim_boem_win.dir/all: lib/CMakeFiles/lib.dir/all
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_boem_win.dir/build.make sim_vis_win/CMakeFiles/sim_boem_win.dir/depend
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_boem_win.dir/build.make sim_vis_win/CMakeFiles/sim_boem_win.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target sim_boem_win"
+.PHONY : sim_vis_win/CMakeFiles/sim_boem_win.dir/all
+
+# Build rule for subdir invocation for target.
+sim_vis_win/CMakeFiles/sim_boem_win.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_vis_win/CMakeFiles/sim_boem_win.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 0
+.PHONY : sim_vis_win/CMakeFiles/sim_boem_win.dir/rule
+
+# Convenience name for target.
+sim_boem_win: sim_vis_win/CMakeFiles/sim_boem_win.dir/rule
+
+.PHONY : sim_boem_win
+
+# clean rule for target.
+sim_vis_win/CMakeFiles/sim_boem_win.dir/clean:
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_boem_win.dir/build.make sim_vis_win/CMakeFiles/sim_boem_win.dir/clean
+.PHONY : sim_vis_win/CMakeFiles/sim_boem_win.dir/clean
+
+#=============================================================================
+# Target rules for target sim_vis_win/CMakeFiles/sim_em_win.dir
+
+# All Build rule for target.
+sim_vis_win/CMakeFiles/sim_em_win.dir/all: lib/CMakeFiles/lib.dir/all
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_em_win.dir/build.make sim_vis_win/CMakeFiles/sim_em_win.dir/depend
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_em_win.dir/build.make sim_vis_win/CMakeFiles/sim_em_win.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=35,36 "Built target sim_em_win"
+.PHONY : sim_vis_win/CMakeFiles/sim_em_win.dir/all
+
+# Build rule for subdir invocation for target.
+sim_vis_win/CMakeFiles/sim_em_win.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_vis_win/CMakeFiles/sim_em_win.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 0
+.PHONY : sim_vis_win/CMakeFiles/sim_em_win.dir/rule
+
+# Convenience name for target.
+sim_em_win: sim_vis_win/CMakeFiles/sim_em_win.dir/rule
+
+.PHONY : sim_em_win
+
+# clean rule for target.
+sim_vis_win/CMakeFiles/sim_em_win.dir/clean:
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_em_win.dir/build.make sim_vis_win/CMakeFiles/sim_em_win.dir/clean
+.PHONY : sim_vis_win/CMakeFiles/sim_em_win.dir/clean
+
+#=============================================================================
+# Target rules for target sim_vis_win/CMakeFiles/sim_opt_win.dir
+
+# All Build rule for target.
+sim_vis_win/CMakeFiles/sim_opt_win.dir/all: lib/CMakeFiles/lib.dir/all
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_opt_win.dir/build.make sim_vis_win/CMakeFiles/sim_opt_win.dir/depend
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_opt_win.dir/build.make sim_vis_win/CMakeFiles/sim_opt_win.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=41,42 "Built target sim_opt_win"
+.PHONY : sim_vis_win/CMakeFiles/sim_opt_win.dir/all
+
+# Build rule for subdir invocation for target.
+sim_vis_win/CMakeFiles/sim_opt_win.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_vis_win/CMakeFiles/sim_opt_win.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles 0
+.PHONY : sim_vis_win/CMakeFiles/sim_opt_win.dir/rule
+
+# Convenience name for target.
+sim_opt_win: sim_vis_win/CMakeFiles/sim_opt_win.dir/rule
+
+.PHONY : sim_opt_win
+
+# clean rule for target.
+sim_vis_win/CMakeFiles/sim_opt_win.dir/clean:
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_opt_win.dir/build.make sim_vis_win/CMakeFiles/sim_opt_win.dir/clean
+.PHONY : sim_vis_win/CMakeFiles/sim_opt_win.dir/clean
 
 #=============================================================================
 # Target rules for target exp/CMakeFiles/backend_boem_app.dir
@@ -475,7 +687,7 @@ exp/CMakeFiles/backend_opt_app.dir/clean:
 exp/CMakeFiles/traj_process_app.dir/all:
 	$(MAKE) $(MAKESILENT) -f exp/CMakeFiles/traj_process_app.dir/build.make exp/CMakeFiles/traj_process_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f exp/CMakeFiles/traj_process_app.dir/build.make exp/CMakeFiles/traj_process_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target traj_process_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alexie/Documents/slam_demo-1/cmake-build-debug/CMakeFiles --progress-num=43,44 "Built target traj_process_app"
 .PHONY : exp/CMakeFiles/traj_process_app.dir/all
 
 # Build rule for subdir invocation for target.

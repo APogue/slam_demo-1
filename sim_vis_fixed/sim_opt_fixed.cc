@@ -352,12 +352,11 @@ class ExpLandmarkOptSLAM: public ExpLandmarkSLAM {
 };
 
 
-
 int main(int argc, char **argv) {
 //  srand((unsigned int) time(NULL)); //eigen uses the random number generator of the standard lib
 
   std::cout << "simulate optimization based SLAM..." << std::endl;
-
+  Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
   google::InitGoogleLogging(argv[0]);
 
   int num_real = atoi(argv[1]);
@@ -366,10 +365,10 @@ int main(int argc, char **argv) {
     ExpLandmarkOptSLAM slam_problem("config/config_sim.yaml");
 
     slam_problem.CreateTrajectory();
-    slam_problem.CreateLandmark();
+    slam_problem.CreateLandmark(urng);
 
-    slam_problem.CreateImuData();
-    slam_problem.CreateObservationData();
+    slam_problem.CreateImuData(urng);
+    slam_problem.CreateObservationData(urng);
 
     // slam_problem.OutputGroundtruth("result/sim/gt.csv");
 

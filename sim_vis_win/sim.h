@@ -141,13 +141,14 @@ class ExpLandmarkSLAM {
 
  public:
 
-  ExpLandmarkSLAM(std::string config_file_path) {
+  ExpLandmarkSLAM(double time_win, std::string config_file_path) {
 
     cv::FileStorage config_file(config_file_path, cv::FileStorage::READ);
 
     landmark_len_ = (size_t)(int) config_file["landmark_len"];
 
-    duration_ = (double) config_file["duration"];
+//    duration_ = (double) config_file["duration"];
+    duration_ = time_win;
     dt_ = (double) config_file["dt"];
     keyframe_rate_ratio_ = (size_t)(int) config_file["keyframe_rate_ratio"];
 
@@ -592,59 +593,59 @@ class ExpLandmarkSLAM {
   }
 
 
-  bool OutputGroundtruth(std::string output_file_name) {
+    bool OutputGroundtruth(std::string output_file_name) {
 
-    std::ofstream output_file(output_file_name);
+      std::ofstream output_file(output_file_name);
 
-    output_file << "timestamp,p_x,p_y,p_z,v_x,v_y,v_z,q_w,q_x,q_y,q_z\n";
+      output_file << "timestamp,p_x,p_y,p_z,v_x,v_y,v_z,q_w,q_x,q_y,q_z\n";
 
-    for (size_t i=0; i<state_len_; ++i) {
+      for (size_t i=0; i<state_len_; ++i) {
 
-      output_file << std::to_string(state_vec_.at(i)->t_) << ",";
-      output_file << std::to_string(state_vec_.at(i)->p_(0)) << ",";
-      output_file << std::to_string(state_vec_.at(i)->p_(1)) << ",";
-      output_file << std::to_string(state_vec_.at(i)->p_(2)) << ",";
-      output_file << std::to_string(state_vec_.at(i)->v_(0)) << ",";
-      output_file << std::to_string(state_vec_.at(i)->v_(1)) << ",";
-      output_file << std::to_string(state_vec_.at(i)->v_(2)) << ",";
-      output_file << std::to_string(state_vec_.at(i)->q_.w()) << ",";
-      output_file << std::to_string(state_vec_.at(i)->q_.x()) << ",";
-      output_file << std::to_string(state_vec_.at(i)->q_.y()) << ",";
-      output_file << std::to_string(state_vec_.at(i)->q_.z()) << std::endl;
+        output_file << std::to_string(state_vec_.at(i)->t_) << ",";
+        output_file << std::to_string(state_vec_.at(i)->p_(0)) << ",";
+        output_file << std::to_string(state_vec_.at(i)->p_(1)) << ",";
+        output_file << std::to_string(state_vec_.at(i)->p_(2)) << ",";
+        output_file << std::to_string(state_vec_.at(i)->v_(0)) << ",";
+        output_file << std::to_string(state_vec_.at(i)->v_(1)) << ",";
+        output_file << std::to_string(state_vec_.at(i)->v_(2)) << ",";
+        output_file << std::to_string(state_vec_.at(i)->q_.w()) << ",";
+        output_file << std::to_string(state_vec_.at(i)->q_.x()) << ",";
+        output_file << std::to_string(state_vec_.at(i)->q_.y()) << ",";
+        output_file << std::to_string(state_vec_.at(i)->q_.z()) << std::endl;
+      }
+
+      output_file.close();
+
+      return true;
+
+
     }
 
-    output_file.close();
+    bool OutputResult(std::string output_file_name) {
 
-    return true;
+      std::ofstream output_file(output_file_name, std::ios_base::app);
 
+      output_file << "timestamp,p_x,p_y,p_z,v_x,v_y,v_z,q_w,q_x,q_y,q_z\n";
 
-  }
+      for (size_t i=0; i<state_len_; ++i) {
 
-  bool OutputResult(std::string output_file_name) {
+        output_file << std::to_string(state_est_vec_.at(i)->t_) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->p_(0)) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->p_(1)) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->p_(2)) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->v_(0)) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->v_(1)) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->v_(2)) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->q_.w()) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->q_.x()) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->q_.y()) << ",";
+        output_file << std::to_string(state_est_vec_.at(i)->q_.z()) << std::endl;
+      }
 
-    std::ofstream output_file(output_file_name);
+      output_file.close();
 
-    output_file << "timestamp,p_x,p_y,p_z,v_x,v_y,v_z,q_w,q_x,q_y,q_z\n";
-
-    for (size_t i=0; i<state_len_; ++i) {
-
-      output_file << std::to_string(state_est_vec_.at(i)->t_) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->p_(0)) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->p_(1)) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->p_(2)) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->v_(0)) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->v_(1)) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->v_(2)) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->q_.w()) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->q_.x()) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->q_.y()) << ",";
-      output_file << std::to_string(state_est_vec_.at(i)->q_.z()) << std::endl;
+      return true;
     }
-
-    output_file.close();
-
-    return true;
-  }
   
 
  protected:

@@ -209,6 +209,84 @@ sim_boem_app/fast:
 .PHONY : sim_boem_app/fast
 
 #=============================================================================
+# Target rules for targets named sim_opt_fixed
+
+# Build rule for target.
+sim_opt_fixed: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_opt_fixed
+.PHONY : sim_opt_fixed
+
+# fast build rule for target.
+sim_opt_fixed/fast:
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build
+.PHONY : sim_opt_fixed/fast
+
+#=============================================================================
+# Target rules for targets named sim_boem_fixed
+
+# Build rule for target.
+sim_boem_fixed: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_boem_fixed
+.PHONY : sim_boem_fixed
+
+# fast build rule for target.
+sim_boem_fixed/fast:
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build
+.PHONY : sim_boem_fixed/fast
+
+#=============================================================================
+# Target rules for targets named sim_em_fixed
+
+# Build rule for target.
+sim_em_fixed: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_em_fixed
+.PHONY : sim_em_fixed
+
+# fast build rule for target.
+sim_em_fixed/fast:
+	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build
+.PHONY : sim_em_fixed/fast
+
+#=============================================================================
+# Target rules for targets named sim_boem_win
+
+# Build rule for target.
+sim_boem_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_boem_win
+.PHONY : sim_boem_win
+
+# fast build rule for target.
+sim_boem_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_boem_win.dir/build.make sim_vis_win/CMakeFiles/sim_boem_win.dir/build
+.PHONY : sim_boem_win/fast
+
+#=============================================================================
+# Target rules for targets named sim_em_win
+
+# Build rule for target.
+sim_em_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_em_win
+.PHONY : sim_em_win
+
+# fast build rule for target.
+sim_em_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_em_win.dir/build.make sim_vis_win/CMakeFiles/sim_em_win.dir/build
+.PHONY : sim_em_win/fast
+
+#=============================================================================
+# Target rules for targets named sim_opt_win
+
+# Build rule for target.
+sim_opt_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_opt_win
+.PHONY : sim_opt_win
+
+# fast build rule for target.
+sim_opt_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_opt_win.dir/build.make sim_vis_win/CMakeFiles/sim_opt_win.dir/build
+.PHONY : sim_opt_win/fast
+
+#=============================================================================
 # Target rules for targets named backend_boem_app
 
 # Build rule for target.
@@ -373,8 +451,14 @@ help:
 	@echo "... reprojection_error_test_mc"
 	@echo "... sim_app"
 	@echo "... sim_boem_app"
+	@echo "... sim_boem_fixed"
+	@echo "... sim_boem_win"
 	@echo "... sim_em_app"
+	@echo "... sim_em_fixed"
+	@echo "... sim_em_win"
 	@echo "... sim_opt_app"
+	@echo "... sim_opt_fixed"
+	@echo "... sim_opt_win"
 	@echo "... traj_process_app"
 .PHONY : help
 

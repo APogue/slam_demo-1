@@ -13,8 +13,8 @@ class ExpLandmarkOptSLAM: public ExpLandmarkSLAM {
 
  public:
 
-  ExpLandmarkOptSLAM(std::string config_file_path): 
-    ExpLandmarkSLAM(config_file_path) {
+  ExpLandmarkOptSLAM(double time_win,std::string config_file_path):
+    ExpLandmarkSLAM(time_win,config_file_path) {
 
   }
 
@@ -357,27 +357,32 @@ int main(int argc, char **argv) {
 
   std::cout << "simulate optimization based SLAM..." << std::endl;
 
+  Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
+
   google::InitGoogleLogging(argv[0]);
 
-  ExpLandmarkOptSLAM slam_problem("config/config_sim.yaml");
+  int num_real = atoi(argv[1]);
+  double k = 20;
+  ExpLandmarkOptSLAM slam_problem(k, "config/config_sim.yaml");
 
   slam_problem.CreateTrajectory();
-  slam_problem.CreateLandmark();
+  slam_problem.CreateLandmark(urng);
 
-  slam_problem.CreateImuData();
-  slam_problem.CreateObservationData();
-
-  // slam_problem.OutputGroundtruth("result/sim/gt.csv");
+  slam_problem.CreateImuData(urng);
+  slam_problem.CreateObservationData(urng);
 
 
   slam_problem.InitializeSLAMProblem();
   slam_problem.InitializeTrajectory();
-  // slam_problem.OutputResult("result/sim/pre.csv");
 
   slam_problem.SolveOptProblem();
 
+  slam_problem.OutputResult("result/sim/opt_" + std::to_string(1) + "_"
+  + std::to_string(num_real) + ".csv");
 
-  slam_problem.OutputResult("result/sim/opt.csv");
+  std::cout << "Completed OPT trial window" << std::to_string(1) << std::endl;
+  std::cout << "Completed OPT realization" << std::to_string(1) << std::endl;
+
 
   return 0;
 }

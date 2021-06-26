@@ -41,6 +41,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/alexie/Documents/slam_demo-1/cmake-build-debug/lib/cmake_install.cmake")
   include("/home/alexie/Documents/slam_demo-1/cmake-build-debug/sim/cmake_install.cmake")
+  include("/home/alexie/Documents/slam_demo-1/cmake-build-debug/sim_vis_fixed/cmake_install.cmake")
+  include("/home/alexie/Documents/slam_demo-1/cmake-build-debug/sim_vis_win/cmake_install.cmake")
   include("/home/alexie/Documents/slam_demo-1/cmake-build-debug/exp/cmake_install.cmake")
   include("/home/alexie/Documents/slam_demo-1/cmake-build-debug/test/cmake_install.cmake")
 

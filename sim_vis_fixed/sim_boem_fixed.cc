@@ -369,13 +369,12 @@ int main(int argc, char **argv) {
 //  srand((unsigned int) time(NULL)); //eigen uses the random number generator of the standard lib
 
   std::cout << "simulate BOEM SLAM..." << std::endl;
-
+  Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
   google::InitGoogleLogging(argv[0]);
 
   int num_real = atoi(argv[1]);
 
   for (size_t i = 0; i < num_real; ++i) {
-    Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
     ExpLandmarkBoemSLAM slam_problem("config/config_sim.yaml");
     slam_problem.CreateTrajectory();
     slam_problem.CreateLandmark(urng);

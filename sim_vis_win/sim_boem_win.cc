@@ -13,8 +13,8 @@ class ExpLandmarkBoemSLAM: public ExpLandmarkSLAM {
 
  public:
 
-  ExpLandmarkBoemSLAM(std::string config_file_path): 
-    ExpLandmarkSLAM(config_file_path) {
+  ExpLandmarkBoemSLAM(double time_win, std::string config_file_path):
+    ExpLandmarkSLAM(time_win, config_file_path) {
 
   }
 
@@ -386,7 +386,8 @@ int main(int argc, char **argv) {
 
   google::InitGoogleLogging(argv[0]);
   Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
-  ExpLandmarkBoemSLAM slam_problem("config/config_sim.yaml");
+  double k = 20;
+  ExpLandmarkBoemSLAM slam_problem(k,"config/config_sim.yaml");
 
   slam_problem.CreateTrajectory();
   slam_problem.CreateLandmark(urng);

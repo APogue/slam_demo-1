@@ -2,20 +2,22 @@
 
 REPEAT_VAR="2"
 
-./build/sim/sim_vis/sim_vis $REPEAT_VAR
-./build/sim/sim_vis/sim_opt_vis $REPEAT_VAR
-./build/sim/sim_vis/sim_em_vis $REPEAT_VAR
-./build/sim/sim_vis/sim_boem_vis $REPEAT_VAR
+#./build/sim_vis_fixed/sim_opt_fixed $REPEAT_VAR
+#./build/sim_vis_fixed/sim_em_fixed $REPEAT_VAR
+#./build/sim_vis_fixed/sim_boem_fixed $REPEAT_VAR
 
-#./build/sim/sim_app
-#./build/sim/sim_opt_app
-#./build/sim/sim_em_app
-#./build/sim/sim_boem_app
+#
+#./build/sim_vis_win/sim_opt_win $REPEAT_VAR
+#./build/sim_vis_win/sim_em_win $REPEAT_VAR
+#./build/sim_vis_win/sim_boem_win $REPEAT_VAR
 
-#REPEAT_VAR="2"
-#perf stat -r $REPEAT_VAR ./build/sim/sim_boem_app
+
+REPEAT_VAR="2"
+
+perf stat -r $REPEAT_VAR ./build/sim_vis_win/sim_opt_win $REPEAT_VAR
+
 
 
 #python sim_eval.py
-python eval_sim_fig2.py $REPEAT_VAR
+#python eval_sim_fig2.py $REPEAT_VAR
 

@@ -19,6 +19,8 @@ find_package(Ceres REQUIRED)
 
 add_subdirectory(lib)
 add_subdirectory(sim)
+add_subdirectory(sim_vis_fixed)
+add_subdirectory(sim_vis_win)
 add_subdirectory(exp)
 
 
