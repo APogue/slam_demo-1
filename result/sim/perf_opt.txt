@@ -1,0 +1,44 @@
+simulate optimization based SLAM...
+state_vec_ 20
+imu_vec_ 19
+observation_vec_ 19
+simulate optimization based SLAM...
+state_vec_ 20
+imu_vec_ 19
+observation_vec_ 19
+
+ Performance counter stats for './build/sim_win/sim_opt_win 2' (2 runs):
+
+            910.77 msec task-clock                #    2.996 CPUs utilized            ( +- 20.39% )
+               683      context-switches          #    0.750 K/sec                    ( +- 25.48% )
+                 8      cpu-migrations            #    0.009 K/sec                    ( +- 41.18% )
+               646      page-faults               #    0.710 K/sec                    ( +-  0.54% )
+     3,048,388,184      cycles                    #    3.347 GHz                      ( +- 19.77% )
+     2,981,711,043      instructions              #    0.98  insn per cycle           ( +- 18.20% )
+       483,041,836      branches                  #  530.367 M/sec                    ( +- 18.37% )
+         3,266,604      branch-misses             #    0.68% of all branches          ( +- 22.47% )
+
+            0.3040 +- 0.0447 seconds time elapsed  ( +- 14.69% )
+
+simulate optimization based SLAM...
+state_vec_ 40
+imu_vec_ 39
+observation_vec_ 39
+simulate optimization based SLAM...
+state_vec_ 40
+imu_vec_ 39
+observation_vec_ 39
+
+ Performance counter stats for './build/sim_win/sim_opt_win 4' (2 runs):
+
+          4,646.30 msec task-clock                #    3.958 CPUs utilized            ( +- 14.95% )
+             1,830      context-switches          #    0.394 K/sec                    ( +- 15.14% )
+                26      cpu-migrations            #    0.005 K/sec                    ( +-  1.96% )
+             1,110      page-faults               #    0.239 K/sec                    ( +-  2.48% )
+    15,513,583,462      cycles                    #    3.339 GHz                      ( +- 14.91% )
+    14,575,157,778      instructions              #    0.94  insn per cycle           ( +- 14.13% )
+     2,369,718,313      branches                  #  510.022 M/sec                    ( +- 14.28% )
+        15,272,850      branch-misses             #    0.64% of all branches          ( +- 12.44% )
+
+             1.174 +- 0.139 seconds time elapsed  ( +- 11.82% )
+

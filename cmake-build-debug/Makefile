@@ -218,7 +218,7 @@ sim_opt_fixed: cmake_check_build_system
 
 # fast build rule for target.
 sim_opt_fixed/fast:
-	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_opt_fixed.dir/build
+	$(MAKE) $(MAKESILENT) -f sim_fixed/CMakeFiles/sim_opt_fixed.dir/build.make sim_fixed/CMakeFiles/sim_opt_fixed.dir/build
 .PHONY : sim_opt_fixed/fast
 
 #=============================================================================
@@ -231,7 +231,7 @@ sim_boem_fixed: cmake_check_build_system
 
 # fast build rule for target.
 sim_boem_fixed/fast:
-	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_boem_fixed.dir/build
+	$(MAKE) $(MAKESILENT) -f sim_fixed/CMakeFiles/sim_boem_fixed.dir/build.make sim_fixed/CMakeFiles/sim_boem_fixed.dir/build
 .PHONY : sim_boem_fixed/fast
 
 #=============================================================================
@@ -244,7 +244,7 @@ sim_em_fixed: cmake_check_build_system
 
 # fast build rule for target.
 sim_em_fixed/fast:
-	$(MAKE) $(MAKESILENT) -f sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build.make sim_vis_fixed/CMakeFiles/sim_em_fixed.dir/build
+	$(MAKE) $(MAKESILENT) -f sim_fixed/CMakeFiles/sim_em_fixed.dir/build.make sim_fixed/CMakeFiles/sim_em_fixed.dir/build
 .PHONY : sim_em_fixed/fast
 
 #=============================================================================
@@ -257,7 +257,7 @@ sim_boem_win: cmake_check_build_system
 
 # fast build rule for target.
 sim_boem_win/fast:
-	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_boem_win.dir/build.make sim_vis_win/CMakeFiles/sim_boem_win.dir/build
+	$(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_boem_win.dir/build.make sim_win/CMakeFiles/sim_boem_win.dir/build
 .PHONY : sim_boem_win/fast
 
 #=============================================================================
@@ -270,7 +270,7 @@ sim_em_win: cmake_check_build_system
 
 # fast build rule for target.
 sim_em_win/fast:
-	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_em_win.dir/build.make sim_vis_win/CMakeFiles/sim_em_win.dir/build
+	$(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_em_win.dir/build.make sim_win/CMakeFiles/sim_em_win.dir/build
 .PHONY : sim_em_win/fast
 
 #=============================================================================
@@ -283,7 +283,7 @@ sim_opt_win: cmake_check_build_system
 
 # fast build rule for target.
 sim_opt_win/fast:
-	$(MAKE) $(MAKESILENT) -f sim_vis_win/CMakeFiles/sim_opt_win.dir/build.make sim_vis_win/CMakeFiles/sim_opt_win.dir/build
+	$(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_opt_win.dir/build.make sim_win/CMakeFiles/sim_opt_win.dir/build
 .PHONY : sim_opt_win/fast
 
 #=============================================================================

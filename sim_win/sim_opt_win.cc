@@ -240,7 +240,7 @@ class ExpLandmarkOptSLAM: public ExpLandmarkSLAM {
     ceres::LocalParameterization*   quat_parameterization_ptr;
 
     optimization_options.linear_solver_type = ceres::SPARSE_SCHUR;
-    optimization_options.minimizer_progress_to_stdout = true;
+    optimization_options.minimizer_progress_to_stdout = false;
     optimization_options.num_threads = 6;
     optimization_options.function_tolerance = 1e-20;
     optimization_options.parameter_tolerance = 1e-25;
@@ -331,7 +331,7 @@ class ExpLandmarkOptSLAM: public ExpLandmarkSLAM {
 
     // solve the optimization problem
     ceres::Solve(optimization_options, &optimization_problem, &optimization_summary);
-    std::cout << optimization_summary.FullReport() << "\n";
+//    std::cout << optimization_summary.FullReport() << "\n";
 
 
     // store results
@@ -361,9 +361,9 @@ int main(int argc, char **argv) {
 
   google::InitGoogleLogging(argv[0]);
 
-  int num_real = atoi(argv[1]);
-  double k = 20;
-  ExpLandmarkOptSLAM slam_problem(k, "config/config_sim.yaml");
+  int time_win = atoi(argv[1]);
+
+  ExpLandmarkOptSLAM slam_problem(time_win, "config/config_sim.yaml");
 
   slam_problem.CreateTrajectory();
   slam_problem.CreateLandmark(urng);
@@ -377,12 +377,7 @@ int main(int argc, char **argv) {
 
   slam_problem.SolveOptProblem();
 
-  slam_problem.OutputResult("result/sim/opt_" + std::to_string(1) + "_"
-  + std::to_string(num_real) + ".csv");
-
-  std::cout << "Completed OPT trial window" << std::to_string(1) << std::endl;
-  std::cout << "Completed OPT realization" << std::to_string(1) << std::endl;
-
+  slam_problem.OutputResult("result/sim/opt_" + std::to_string(time_win) + ".csv");
 
   return 0;
 }

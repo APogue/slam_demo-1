@@ -239,7 +239,7 @@ class ExpLandmarkEmSLAM: public ExpLandmarkSLAM {
     ceres::LocalParameterization*   quat_parameterization_ptr;
 
     optimization_options.linear_solver_type = ceres::SPARSE_SCHUR;
-    optimization_options.minimizer_progress_to_stdout = true;
+    optimization_options.minimizer_progress_to_stdout = false;
     optimization_options.num_threads = 6;
     optimization_options.function_tolerance = 1e-20;
     optimization_options.parameter_tolerance = 1e-25;
@@ -332,7 +332,7 @@ class ExpLandmarkEmSLAM: public ExpLandmarkSLAM {
 
 
     ceres::Solve(optimization_options, &optimization_problem, &optimization_summary);
-    std::cout << optimization_summary.FullReport() << "\n";
+//    std::cout << optimization_summary.FullReport() << "\n";
 
 
     // store results
@@ -353,10 +353,14 @@ class ExpLandmarkEmSLAM: public ExpLandmarkSLAM {
 int main(int argc, char **argv) {
 
   std::cout << "simulate EM SLAM..." << std::endl;
+
   Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
+
   google::InitGoogleLogging(argv[0]);
-  double k = 20;
-  ExpLandmarkEmSLAM slam_problem(k,"config/config_sim.yaml");
+
+  int time_win = atoi(argv[1]);
+
+  ExpLandmarkEmSLAM slam_problem(time_win,"config/config_sim.yaml");
 
   slam_problem.CreateTrajectory();
   slam_problem.CreateLandmark(urng);
@@ -372,7 +376,7 @@ int main(int argc, char **argv) {
   slam_problem.E_step();
 
 
-  slam_problem.OutputResult("result/sim/em.csv");
+  slam_problem.OutputResult("result/sim/em_" + std::to_string(time_win) + ".csv");
 
   return 0;
 }

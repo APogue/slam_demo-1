@@ -5,9 +5,9 @@
       <config projectName="slam_demo" targetName="backend_opt_app" />
       <config projectName="slam_demo" targetName="pre_int_imu_error_test" />
       <config projectName="slam_demo" targetName="traj_process_app" />
+      <config projectName="slam_demo" targetName="sim_boem_fixed" />
       <config projectName="slam_demo" targetName="sim_opt_app" />
       <config projectName="slam_demo" targetName="gt_process_app" />
-      <config projectName="slam_demo" targetName="sim_boem_fixed" />
       <config projectName="slam_demo" targetName="backend_boem_app" />
       <config projectName="slam_demo" targetName="eigenRand_test" />
       <config projectName="slam_demo" targetName="sim_boem_win" />
@@ -35,7 +35,30 @@
   <component name="ChangeListManager">
     <list default="true" id="79909e2e-9624-4e47-b74e-699440f6a2b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/slam_demo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/slam_demo.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_1_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_eval_fixed.py" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed_eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_eval_win.py" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win_eval.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sim_run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sim_run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim_boem_fixed.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim_boem_fixed.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim_em_fixed.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim_em_fixed.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim_opt_fixed.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim_opt_fixed.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_win/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim_boem_win.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim_boem_win.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim_em_win.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim_em_win.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim_opt_win.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim_opt_win.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +83,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sim_vis_win" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,12 +101,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.backend_boem_app">
-    <configuration name="EigenRand" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="EigenRand" CONFIG_NAME="Debug">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="EigenRand" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="EigenRand" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -254,6 +277,10 @@
       <workItem from="1623091972544" duration="14050000" />
       <workItem from="1623180651017" duration="10647000" />
       <workItem from="1624654176836" duration="18699000" />
+      <workItem from="1624866514767" duration="52000" />
+      <workItem from="1624868249883" duration="15000" />
+      <workItem from="1625178954928" duration="1223000" />
+      <workItem from="1625182975237" duration="11334000" />
     </task>
     <servers />
   </component>

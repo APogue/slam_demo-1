@@ -260,7 +260,7 @@ class ExpLandmarkBoemSLAM: public ExpLandmarkSLAM {
       ceres::LocalParameterization*   quat_parameterization_ptr;
 
       optimization_options.linear_solver_type = ceres::SPARSE_SCHUR;
-      optimization_options.minimizer_progress_to_stdout = true;
+      optimization_options.minimizer_progress_to_stdout = false;
       optimization_options.num_threads = 6;
       optimization_options.function_tolerance = 1e-20;
       optimization_options.parameter_tolerance = 1e-25;
@@ -385,9 +385,12 @@ int main(int argc, char **argv) {
   std::cout << "simulate BOEM SLAM..." << std::endl;
 
   google::InitGoogleLogging(argv[0]);
+
   Eigen::Rand::Vmt19937_64 urng{ (unsigned int) time(0) };
-  double k = 20;
-  ExpLandmarkBoemSLAM slam_problem(k,"config/config_sim.yaml");
+
+  int time_win = atoi(argv[1]);
+
+  ExpLandmarkBoemSLAM slam_problem(time_win,"config/config_sim.yaml");
 
   slam_problem.CreateTrajectory();
   slam_problem.CreateLandmark(urng);
@@ -403,7 +406,7 @@ int main(int argc, char **argv) {
 
 
 
-  slam_problem.OutputResult("result/sim/boem.csv");
+  slam_problem.OutputResult("result/sim/boem_" + std::to_string(time_win) + ".csv");
 
   return 0;
 }
