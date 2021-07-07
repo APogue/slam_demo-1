@@ -60,3 +60,65 @@ observation_vec_ 399
 
              3.314 +- 0.153 seconds time elapsed  ( +-  4.61% )
 
+simulate BOEM SLAM...
+state_vec_ 200
+imu_vec_ 199
+observation_vec_ 199
+1 0, 30
+2 30, 94
+3 94, 195
+4 195, 199
+simulate BOEM SLAM...
+state_vec_ 200
+imu_vec_ 199
+observation_vec_ 199
+1 0, 30
+2 30, 94
+3 94, 195
+4 195, 199
+
+ Performance counter stats for './build/sim_win/sim_boem_win 20' (2 runs):
+
+          3,078.08 msec task-clock                #    2.058 CPUs utilized            ( +-  8.94% )
+             1,773      context-switches          #    0.576 K/sec                    ( +-  6.09% )
+                22      cpu-migrations            #    0.007 K/sec                    ( +- 39.53% )
+               878      page-faults               #    0.285 K/sec                    ( +-  1.88% )
+    12,425,111,370      cycles                    #    4.037 GHz                      ( +-  8.74% )
+    12,622,890,226      instructions              #    1.02  insn per cycle           ( +-  7.56% )
+     2,073,905,602      branches                  #  673.765 M/sec                    ( +-  7.77% )
+         5,592,574      branch-misses             #    0.27% of all branches          ( +-  7.28% )
+
+            1.4957 +- 0.0655 seconds time elapsed  ( +-  4.38% )
+
+simulate BOEM SLAM...
+state_vec_ 400
+imu_vec_ 399
+observation_vec_ 399
+1 0, 30
+2 30, 94
+3 94, 195
+4 195, 333
+5 333, 399
+simulate BOEM SLAM...
+state_vec_ 400
+imu_vec_ 399
+observation_vec_ 399
+1 0, 30
+2 30, 94
+3 94, 195
+4 195, 333
+5 333, 399
+
+ Performance counter stats for './build/sim_win/sim_boem_win 40' (2 runs):
+
+          5,590.58 msec task-clock                #    1.851 CPUs utilized            ( +-  1.02% )
+             3,096      context-switches          #    0.554 K/sec                    ( +- 44.34% )
+                44      cpu-migrations            #    0.008 K/sec                    ( +- 21.35% )
+             1,238      page-faults               #    0.221 K/sec                    ( +-  1.25% )
+    22,030,938,263      cycles                    #    3.941 GHz                      ( +-  0.33% )
+    22,593,489,165      instructions              #    1.03  insn per cycle           ( +-  1.37% )
+     3,689,618,396      branches                  #  659.970 M/sec                    ( +-  1.40% )
+        10,180,544      branch-misses             #    0.28% of all branches          ( +-  1.00% )
+
+            3.0197 +- 0.0715 seconds time elapsed  ( +-  2.37% )
+
