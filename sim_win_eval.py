@@ -29,7 +29,7 @@ num_win = 2
 # read and write csv files
 
 #read the csv files and reorganize them
-# for tw in range(time_diff,time_diff*num_win+1, 20):
+# for tw in range(time_diff,time_diff*num_win+1, time_diff):
 # 	skip_len = 0
 # 	for nr in range(1,num_realizations+1):
 # 		boem_data = pd.read_csv("result/sim/boem_%s.csv" % (tw,), skiprows=skip_len, nrows=tw*10)
@@ -42,6 +42,40 @@ num_win = 2
 # 	os.remove("result/sim/boem_%s.csv" % (tw,))
 # 	os.remove("result/sim/em_%s.csv" % (tw,))
 # 	os.remove("result/sim/opt_%s.csv" % (tw,))
+
+
+boem_result = []
+em_result = []
+opt_result = []
+result_lists = [boem_result, em_result, opt_result]
+result_string = ['boem', 'em', 'opt']
+boem_time = []
+boem_sd = []
+em_time = []
+em_sd = []
+opt_time = []
+opt_sd = []
+time_lists = [boem_time, em_time, opt_time]
+sd_lists = [boem_sd, em_sd, opt_sd]
+for str_index, str in enumerate(result_string):
+	with open("result/sim/perf_%s.txt" % (str,)) as textFile:
+		for line in textFile.readlines():
+			index = line.find('seconds time elapsed')
+			if index!= -1:
+				line_2_phrase = line[:index]
+				result_lists[str_index].append(line_2_phrase.strip())
+	textFile.close()
+
+for k in range(len(result_string)):
+	for tnr in range(num_realizations):
+		findex = result_lists[k][tnr].find('+')
+		time = result_lists[k][tnr][:findex]
+		std = result_lists[k][tnr][findex+2:]
+		time_lists[k].append(time.strip())
+		sd_lists[k].append(std.strip())
+
+
+
 
 
 
