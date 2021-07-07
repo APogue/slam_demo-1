@@ -248,6 +248,32 @@ sim_em_fixed/fast:
 .PHONY : sim_em_fixed/fast
 
 #=============================================================================
+# Target rules for targets named sim_app_win
+
+# Build rule for target.
+sim_app_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_app_win
+.PHONY : sim_app_win
+
+# fast build rule for target.
+sim_app_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_app_win.dir/build.make sim_win/CMakeFiles/sim_app_win.dir/build
+.PHONY : sim_app_win/fast
+
+#=============================================================================
+# Target rules for targets named sim_opt_win
+
+# Build rule for target.
+sim_opt_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_opt_win
+.PHONY : sim_opt_win
+
+# fast build rule for target.
+sim_opt_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_opt_win.dir/build.make sim_win/CMakeFiles/sim_opt_win.dir/build
+.PHONY : sim_opt_win/fast
+
+#=============================================================================
 # Target rules for targets named sim_boem_win
 
 # Build rule for target.
@@ -272,19 +298,6 @@ sim_em_win: cmake_check_build_system
 sim_em_win/fast:
 	$(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_em_win.dir/build.make sim_win/CMakeFiles/sim_em_win.dir/build
 .PHONY : sim_em_win/fast
-
-#=============================================================================
-# Target rules for targets named sim_opt_win
-
-# Build rule for target.
-sim_opt_win: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_opt_win
-.PHONY : sim_opt_win
-
-# fast build rule for target.
-sim_opt_win/fast:
-	$(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_opt_win.dir/build.make sim_win/CMakeFiles/sim_opt_win.dir/build
-.PHONY : sim_opt_win/fast
 
 #=============================================================================
 # Target rules for targets named backend_boem_app
@@ -450,6 +463,7 @@ help:
 	@echo "... reprojection_error_test"
 	@echo "... reprojection_error_test_mc"
 	@echo "... sim_app"
+	@echo "... sim_app_win"
 	@echo "... sim_boem_app"
 	@echo "... sim_boem_fixed"
 	@echo "... sim_boem_win"

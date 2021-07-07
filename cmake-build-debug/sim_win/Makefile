@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /home/alexie/Documents/slam_demo-1/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -97,6 +86,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/opt/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,6 +131,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+sim_win/CMakeFiles/sim_app_win.dir/rule:
+	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_win/CMakeFiles/sim_app_win.dir/rule
+.PHONY : sim_win/CMakeFiles/sim_app_win.dir/rule
+
+# Convenience name for target.
+sim_app_win: sim_win/CMakeFiles/sim_app_win.dir/rule
+
+.PHONY : sim_app_win
+
+# fast build rule for target.
+sim_app_win/fast:
+	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_app_win.dir/build.make sim_win/CMakeFiles/sim_app_win.dir/build
+.PHONY : sim_app_win/fast
+
+# Convenience name for target.
+sim_win/CMakeFiles/sim_opt_win.dir/rule:
+	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_win/CMakeFiles/sim_opt_win.dir/rule
+.PHONY : sim_win/CMakeFiles/sim_opt_win.dir/rule
+
+# Convenience name for target.
+sim_opt_win: sim_win/CMakeFiles/sim_opt_win.dir/rule
+
+.PHONY : sim_opt_win
+
+# fast build rule for target.
+sim_opt_win/fast:
+	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_opt_win.dir/build.make sim_win/CMakeFiles/sim_opt_win.dir/build
+.PHONY : sim_opt_win/fast
+
+# Convenience name for target.
 sim_win/CMakeFiles/sim_boem_win.dir/rule:
 	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_win/CMakeFiles/sim_boem_win.dir/rule
 .PHONY : sim_win/CMakeFiles/sim_boem_win.dir/rule
@@ -160,20 +190,32 @@ sim_em_win/fast:
 	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_em_win.dir/build.make sim_win/CMakeFiles/sim_em_win.dir/build
 .PHONY : sim_em_win/fast
 
-# Convenience name for target.
-sim_win/CMakeFiles/sim_opt_win.dir/rule:
-	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_win/CMakeFiles/sim_opt_win.dir/rule
-.PHONY : sim_win/CMakeFiles/sim_opt_win.dir/rule
+sim_app_win.o: sim_app_win.cc.o
 
-# Convenience name for target.
-sim_opt_win: sim_win/CMakeFiles/sim_opt_win.dir/rule
+.PHONY : sim_app_win.o
 
-.PHONY : sim_opt_win
+# target to build an object file
+sim_app_win.cc.o:
+	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_app_win.dir/build.make sim_win/CMakeFiles/sim_app_win.dir/sim_app_win.cc.o
+.PHONY : sim_app_win.cc.o
 
-# fast build rule for target.
-sim_opt_win/fast:
-	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_opt_win.dir/build.make sim_win/CMakeFiles/sim_opt_win.dir/build
-.PHONY : sim_opt_win/fast
+sim_app_win.i: sim_app_win.cc.i
+
+.PHONY : sim_app_win.i
+
+# target to preprocess a source file
+sim_app_win.cc.i:
+	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_app_win.dir/build.make sim_win/CMakeFiles/sim_app_win.dir/sim_app_win.cc.i
+.PHONY : sim_app_win.cc.i
+
+sim_app_win.s: sim_app_win.cc.s
+
+.PHONY : sim_app_win.s
+
+# target to generate assembly for a file
+sim_app_win.cc.s:
+	cd /home/alexie/Documents/slam_demo-1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f sim_win/CMakeFiles/sim_app_win.dir/build.make sim_win/CMakeFiles/sim_app_win.dir/sim_app_win.cc.s
+.PHONY : sim_app_win.cc.s
 
 sim_boem_win.o: sim_boem_win.cc.o
 
@@ -264,9 +306,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sim_app_win"
 	@echo "... sim_boem_win"
 	@echo "... sim_em_win"
 	@echo "... sim_opt_win"
+	@echo "... sim_app_win.o"
+	@echo "... sim_app_win.i"
+	@echo "... sim_app_win.s"
 	@echo "... sim_boem_win.o"
 	@echo "... sim_boem_win.i"
 	@echo "... sim_boem_win.s"

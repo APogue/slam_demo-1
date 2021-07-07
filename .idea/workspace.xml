@@ -24,6 +24,7 @@
       <config projectName="slam_demo" targetName="sim_opt_win" />
       <config projectName="slam_demo" targetName="sim_em_fixed" />
       <config projectName="slam_demo" targetName="sim_em_app" />
+      <config projectName="slam_demo" targetName="sim_app_win" />
       <config projectName="slam_demo" targetName="backend_em_app" />
     </generated>
   </component>
@@ -34,31 +35,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79909e2e-9624-4e47-b74e-699440f6a2b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sim_win/sim_app_win.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/exp/CMakeFiles/traj_process_app.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/exp/CMakeFiles/traj_process_app.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim/CMakeFiles/sim_boem_app.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim/CMakeFiles/sim_boem_app.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim/CMakeFiles/sim_em_app.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim/CMakeFiles/sim_em_app.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim/CMakeFiles/sim_opt_app.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim/CMakeFiles/sim_opt_app.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_fixed/CMakeFiles/sim_boem_fixed.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_fixed/CMakeFiles/sim_boem_fixed.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_fixed/CMakeFiles/sim_em_fixed.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_fixed/CMakeFiles/sim_em_fixed.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_fixed/CMakeFiles/sim_opt_fixed.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_fixed/CMakeFiles/sim_opt_fixed.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/sim_boem_win.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/sim_boem_win.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/sim_em_win.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/sim_em_win.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/sim_opt_win.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_win/CMakeFiles/sim_opt_win.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sim_win/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sim_win/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/slam_demo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/slam_demo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/opt_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/opt_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/opt_1_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_eval_fixed.py" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed_eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_eval_win.py" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win_eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/perf_opt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/perf_opt.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sim_run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sim_run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim_boem_fixed.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim_boem_fixed.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim_em_fixed.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim_em_fixed.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_fixed/sim_opt_fixed.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed/sim_opt_fixed.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_win/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim_boem_win.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim_boem_win.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim_em_win.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim_em_win.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_vis_win/sim_opt_win.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim_opt_win.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win_eval.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +83,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sim_win" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -94,6 +99,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sim_win" />
       <recent name="$PROJECT_DIR$/sim_vis_win" />
       <recent name="$PROJECT_DIR$/sim_vis_fixed" />
       <recent name="$PROJECT_DIR$/sim/sim_vis" />
@@ -101,12 +107,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.backend_boem_app">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="EigenRand" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="EigenRand" CONFIG_NAME="Debug">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EigenRand" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="EigenRand" CONFIG_NAME="Debug">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -167,6 +173,11 @@
       </method>
     </configuration>
     <configuration name="sim_app" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="sim_app" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="slam_demo" RUN_TARGET_NAME="sim_app">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sim_app_win" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="sim_app_win" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="slam_demo" RUN_TARGET_NAME="sim_app_win">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -242,6 +253,7 @@
       <item itemvalue="CMake Application.sim_boem_fixed" />
       <item itemvalue="CMake Application.sim_em_fixed" />
       <item itemvalue="CMake Application.sim_opt_fixed" />
+      <item itemvalue="CMake Application.sim_app_win" />
       <item itemvalue="CMake Application.sim_boem_win" />
       <item itemvalue="CMake Application.sim_em_win" />
       <item itemvalue="CMake Application.sim_opt_win" />
@@ -280,7 +292,10 @@
       <workItem from="1624866514767" duration="52000" />
       <workItem from="1624868249883" duration="15000" />
       <workItem from="1625178954928" duration="1223000" />
-      <workItem from="1625182975237" duration="11334000" />
+      <workItem from="1625182975237" duration="11493000" />
+      <workItem from="1625267823877" duration="6065000" />
+      <workItem from="1625609891168" duration="1982000" />
+      <workItem from="1625612081202" duration="4803000" />
     </task>
     <servers />
   </component>
