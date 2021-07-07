@@ -35,19 +35,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79909e2e-9624-4e47-b74e-699440f6a2b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sim_win_run.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/boem_20_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/boem_20_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/boem_40_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/boem_40_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/em_20_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/em_20_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/em_40_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/em_40_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/opt_20_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/opt_20_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/opt_40_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sim/opt_40_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config_sim.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config_sim.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/boem_20.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/boem_20.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/boem_20_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/boem_20_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/boem_20_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/boem_20_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/boem_40.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/boem_40.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/boem_40_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/boem_40_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/boem_40_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/boem_40_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/em_20.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/em_20.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/em_20_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/em_20_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/em_20_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/em_20_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/em_40.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/em_40.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/em_40_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/em_40_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/em_40_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/em_40_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/gt.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_20.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/opt_20.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_20_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/opt_20_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_20_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/opt_20_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_40.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/opt_40.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_40_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/opt_40_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/opt_40_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/opt_40_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/perf_boem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/perf_boem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/perf_em.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/perf_em.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sim/perf_opt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result/sim/perf_opt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim/sim.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed_run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim_app_win.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win/sim_app_win.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sim_win_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/sim_win_eval.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sim_win" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,11 +102,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/sim_win" />
       <recent name="$PROJECT_DIR$/sim_vis_win" />
       <recent name="$PROJECT_DIR$/sim_vis_fixed" />
       <recent name="$PROJECT_DIR$/sim/sim_vis" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.backend_boem_app">
@@ -218,11 +235,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.backend_boem_app" />
       <item itemvalue="CMake Application.backend_em_app" />
@@ -281,7 +293,9 @@
       <workItem from="1625182975237" duration="11493000" />
       <workItem from="1625267823877" duration="6065000" />
       <workItem from="1625609891168" duration="1982000" />
-      <workItem from="1625612081202" duration="17990000" />
+      <workItem from="1625612081202" duration="18208000" />
+      <workItem from="1625635751121" duration="233000" />
+      <workItem from="1625686218034" duration="10300000" />
     </task>
     <servers />
   </component>

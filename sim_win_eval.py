@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 plot_color = {
 	'gt': [0, 0, 0],
@@ -29,7 +28,7 @@ result_string = ['boem', 'em', 'opt']
 # read the csv files and write to separate csv files
 raw_lists = [[] for i in range(len(result_string))]
 for m in range(len(result_string)):
-	for tw in range(time_diff,time_diff*num_win+1, time_diff):
+	for tw in range(time_diff, time_diff*num_win+1, time_diff):
 		skip_len = 0
 		for nr in range(1,num_realizations+1):
 			raw_lists[m] = pd.read_csv("result/sim/%s_%s.csv" % (result_string[m], tw), skiprows=skip_len, nrows=tw*10)
@@ -50,12 +49,11 @@ for str_index, str in enumerate(result_string):
 				line_2_phrase = line[:index]
 				result_lists[str_index].append(line_2_phrase.strip())
 	textFile.close()
-
 for j in range(len(result_string)):
-	for tnr in range(num_realizations):
-		findex = result_lists[j][tnr].find('+')
-		time = result_lists[j][tnr][:findex]
-		std = result_lists[j][tnr][findex+2:]
+	for tnw in range(num_win):
+		findex = result_lists[j][tnw].find('+')
+		time = result_lists[j][tnw][:findex]
+		std = result_lists[j][tnw][findex+2:]
 		time_lists[j].append(float(time.strip()))
 		sd_lists[j].append(float(std.strip()))
 
@@ -75,12 +73,12 @@ for l in range(len(result_string)):
 fig, (ax1, ax2) = plt.subplots(2)
 fig.set_size_inches(fig_width, fig_height)
 line_width = 1.2
-time_data = range(time_diff,time_diff*num_win+1, time_diff)
+time_data = range(time_diff, time_diff*num_win+1, time_diff)
 for n in range(len(result_string)):
-	ax1.plot(time_data, np.mean(error_array[n],axis=1), color = plot_color[result_string[n]], linewidth=line_width, label=result_string[n])
-	ax1.fill_between(time_data, np.mean(error_array[n],axis=1) - np.std(error_array[n],axis=1)/2,
+	ax1.plot(time_data, np.mean(error_array[n], axis=1), color = plot_color[result_string[n]], linewidth=line_width, label=result_string[n])
+	ax1.fill_between(time_data, np.mean(error_array[n], axis=1) - np.std(error_array[n],axis=1)/2,
 					 np.mean(error_array[n],axis=1) + np.std(error_array[n],axis=1)/2, color = plot_color[result_string[n]], alpha = 0.5)
-	ax2.plot(time_data, time_lists[n],color = plot_color[result_string[n]], linewidth=line_width, label=result_string[n])
+	ax2.plot(time_data, time_lists[n], color = plot_color[result_string[n]], linewidth=line_width, label=result_string[n])
 	ax2.fill_between(time_data, np.array(time_lists[n]) + np.array(sd_lists[n])/2, np.array(time_lists[n]) - np.array(sd_lists[n])/2,
 					 color = plot_color[result_string[n]], linewidth=line_width, label=result_string[n], alpha = 0.5)
 ax1.set(ylabel='average RMSE [m]')
