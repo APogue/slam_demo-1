@@ -18,7 +18,7 @@ plot_color = {
 fig_width = 5.84
 fig_height = 4.38
 
-# error plot
+
 # file should be named like: name_num_win_num_realization
 # there will be 6 realizations 20 s apart
 num_realizations = int(sys.argv[1])
@@ -26,8 +26,8 @@ time_diff = int(sys.argv[2])
 num_win = int(sys.argv[3])
 
 result_string = ['boem', 'em', 'opt']
+# read the csv files and write to separate csv files
 raw_lists = [[] for i in range(len(result_string))]
-# read the csv files and reorganize them
 for m in range(len(result_string)):
 	for tw in range(time_diff,time_diff*num_win+1, time_diff):
 		skip_len = 0
@@ -38,7 +38,6 @@ for m in range(len(result_string)):
 # 		os.remove("result/sim/%s_%s.csv" % (result_string[m], tw))
 
 # get data from the txt files
-
 result_lists = [[] for i in range(len(result_string))]
 time_lists = [[] for i in range(len(result_string))]
 sd_lists = [[] for i in range(len(result_string))]
@@ -60,9 +59,9 @@ for j in range(len(result_string)):
 		time_lists[j].append(float(time.strip()))
 		sd_lists[j].append(float(std.strip()))
 
+# find RMSE error
 gt_data = pd.read_csv("result/sim/gt.csv")
 error_array = np.zeros((len(result_string), num_win, num_realizations))
-
 for l in range(len(result_string)):
 	for h in range(num_win):
 		for k in range(num_realizations):
@@ -72,7 +71,7 @@ for l in range(len(result_string)):
 									   + (gt_data['p_z'][i]-data['p_z'][i])**2
 			error_array[l, h, k] = np.sqrt(error_array[l, h, k]/len(data['p_x']))
 
-
+# plot average over number of realizations with one half standard deviation
 fig, (ax1, ax2) = plt.subplots(2)
 fig.set_size_inches(fig_width, fig_height)
 line_width = 1.2
