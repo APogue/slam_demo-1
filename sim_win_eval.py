@@ -34,7 +34,7 @@ for m in range(len(result_string)):
 			raw_lists[m] = pd.read_csv("result/sim/%s_%s.csv" % (result_string[m], tw), skiprows=skip_len, nrows=tw*10)
 			raw_lists[m].to_csv("result/sim/%s_%s_%s.csv" % (result_string[m], tw, nr), index=False, float_format='%.6f')
 			skip_len+=(tw*10+1)
-# 		os.remove("result/sim/%s_%s.csv" % (result_string[m], tw))
+		# os.remove("result/sim/%s_%s.csv" % (result_string[m], tw))
 
 # get data from the txt files
 result_lists = [[] for i in range(len(result_string))]
@@ -44,18 +44,20 @@ sd_lists = [[] for i in range(len(result_string))]
 for str_index, str in enumerate(result_string):
 	with open("result/sim/perf_%s.txt" % (str,)) as textFile:
 		for line in textFile.readlines():
-			index = line.find('seconds time elapsed')
-			if index!= -1:
-				line_2_phrase = line[:index]
-				result_lists[str_index].append(line_2_phrase.strip())
+			index1 = line.find('msec')
+			if index1!= -1:
+				line_2_phrase1 = line[:index1]
+				index2 = line.find('(')
+				line_2_phrase2 = line[index2+1:index2+10]
+				result_lists[str_index].append(line_2_phrase1+line_2_phrase2 )
 	textFile.close()
 for j in range(len(result_string)):
 	for tnw in range(num_win):
 		findex = result_lists[j][tnw].find('+')
 		time = result_lists[j][tnw][:findex]
 		std = result_lists[j][tnw][findex+2:]
-		time_lists[j].append(float(time.strip()))
-		sd_lists[j].append(float(std.strip()))
+		time_lists[j].append(float(time.strip().replace(",", ""))/1000)
+		sd_lists[j].append(float(std.strip())/100*float(time.strip().replace(",", ""))/1000)
 
 # find RMSE error
 gt_data = pd.read_csv("result/sim/gt.csv")
