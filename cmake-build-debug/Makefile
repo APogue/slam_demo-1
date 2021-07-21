@@ -300,6 +300,58 @@ sim_em_win/fast:
 .PHONY : sim_em_win/fast
 
 #=============================================================================
+# Target rules for targets named sim_app_s_win
+
+# Build rule for target.
+sim_app_s_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_app_s_win
+.PHONY : sim_app_s_win
+
+# fast build rule for target.
+sim_app_s_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_s_win/CMakeFiles/sim_app_s_win.dir/build.make sim_s_win/CMakeFiles/sim_app_s_win.dir/build
+.PHONY : sim_app_s_win/fast
+
+#=============================================================================
+# Target rules for targets named sim_em_app_s_win
+
+# Build rule for target.
+sim_em_app_s_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_em_app_s_win
+.PHONY : sim_em_app_s_win
+
+# fast build rule for target.
+sim_em_app_s_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_s_win/CMakeFiles/sim_em_app_s_win.dir/build.make sim_s_win/CMakeFiles/sim_em_app_s_win.dir/build
+.PHONY : sim_em_app_s_win/fast
+
+#=============================================================================
+# Target rules for targets named sim_opt_app_s_win
+
+# Build rule for target.
+sim_opt_app_s_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_opt_app_s_win
+.PHONY : sim_opt_app_s_win
+
+# fast build rule for target.
+sim_opt_app_s_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_s_win/CMakeFiles/sim_opt_app_s_win.dir/build.make sim_s_win/CMakeFiles/sim_opt_app_s_win.dir/build
+.PHONY : sim_opt_app_s_win/fast
+
+#=============================================================================
+# Target rules for targets named sim_boem_app_s_win
+
+# Build rule for target.
+sim_boem_app_s_win: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim_boem_app_s_win
+.PHONY : sim_boem_app_s_win
+
+# fast build rule for target.
+sim_boem_app_s_win/fast:
+	$(MAKE) $(MAKESILENT) -f sim_s_win/CMakeFiles/sim_boem_app_s_win.dir/build.make sim_s_win/CMakeFiles/sim_boem_app_s_win.dir/build
+.PHONY : sim_boem_app_s_win/fast
+
+#=============================================================================
 # Target rules for targets named backend_boem_app
 
 # Build rule for target.
@@ -463,14 +515,18 @@ help:
 	@echo "... reprojection_error_test"
 	@echo "... reprojection_error_test_mc"
 	@echo "... sim_app"
+	@echo "... sim_app_s_win"
 	@echo "... sim_app_win"
 	@echo "... sim_boem_app"
+	@echo "... sim_boem_app_s_win"
 	@echo "... sim_boem_fixed"
 	@echo "... sim_boem_win"
 	@echo "... sim_em_app"
+	@echo "... sim_em_app_s_win"
 	@echo "... sim_em_fixed"
 	@echo "... sim_em_win"
 	@echo "... sim_opt_app"
+	@echo "... sim_opt_app_s_win"
 	@echo "... sim_opt_fixed"
 	@echo "... sim_opt_win"
 	@echo "... traj_process_app"

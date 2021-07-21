@@ -21,6 +21,7 @@ add_subdirectory(lib)
 add_subdirectory(sim)
 add_subdirectory(sim_fixed)
 add_subdirectory(sim_win)
+add_subdirectory(sim_s_win)
 add_subdirectory(exp)
 
 
