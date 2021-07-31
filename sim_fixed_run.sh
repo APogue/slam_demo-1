@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # FIXED TIME WINDOW EXPERIMENTS
-REPEAT_VAR_FIXED="2"
+REPEAT_VAR_FIXED="1"
 ./build/sim_fixed/sim_opt_fixed $REPEAT_VAR_FIXED
 ./build/sim_fixed/sim_em_fixed $REPEAT_VAR_FIXED
 ./build/sim_fixed/sim_boem_fixed $REPEAT_VAR_FIXED

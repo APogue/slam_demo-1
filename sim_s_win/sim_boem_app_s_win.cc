@@ -26,10 +26,9 @@ class ExpLandmarkBoemSLAM: public ExpLandmarkSLAM {
     double a = 1.1;
     double c = 30.25;
 
-//    size_t block_size = floor(c * pow(n, a));
-    size_t block_size = 50;
+    size_t block_size = floor(c * pow(n, a));
 
-      size_t T = 0; //1;
+    size_t T = 0; //1;
 
     bool reach_end = false;
 
@@ -283,9 +282,6 @@ class ExpLandmarkBoemSLAM: public ExpLandmarkSLAM {
 
 
 
-
-
-
       for (size_t i=0; i<landmark_para_vec_.size(); ++i) {
         optimization_problem.AddParameterBlock(landmark_para_vec_.at(i)->parameters(), 3);
       }
@@ -345,8 +341,7 @@ class ExpLandmarkBoemSLAM: public ExpLandmarkSLAM {
       }
       else {
         n++;
-//        block_size = floor(c * pow(n, a));
-        block_size = 50;
+        block_size = floor(c * pow(n, a));
 
           if (T+block_size > imu_vec_.size()) {
           block_size = imu_vec_.size() - T;

@@ -20,7 +20,7 @@ fig_height = 4.38
 # error plot
 num_realizations = int(sys.argv[1])
 gt_data = pd.read_csv("result/sim/gt.csv")
-result_string = ['boem']
+result_string = ['opt', 'em', 'boem']
 p_error_array = np.zeros((len(result_string), len(gt_data['p_x']), num_realizations))
 q_error_array = np.zeros_like(p_error_array)
 
@@ -53,23 +53,23 @@ line_width = 1.2
 for n in range(len(result_string)):
 	error_q_m =  np.mean(q_error_array[n], axis=1)
 	error_q_s = np.std(q_error_array[n], axis=1)
-	ax1.plot(gt_data['timestamp'], error_q_m, color = plot_color[result_string[n]], linewidth=line_width, label='BOEM')
+	ax1.plot(gt_data['timestamp'], error_q_m, color = plot_color[result_string[n]], linewidth=line_width, label=result_string[n])
 	ax1.fill_between(gt_data['timestamp'], error_q_m - error_q_s/2,
 					 error_q_m + error_q_s/2, color = plot_color[result_string[n]], alpha = 0.5)
 
 	error_p_m =  np.mean(p_error_array[n], axis=1)
 	error_p_s = np.std(p_error_array[n], axis=1)
-	ax2.plot(gt_data['timestamp'], error_p_m, color = plot_color[result_string[n]], linewidth=line_width, label='BOEM')
-	ax2.fill_between(gt_data['timestamp'], error_p_m - error_p_s,
-					 error_p_m + error_p_s, color = plot_color[result_string[n]], alpha = 0.5)
+	ax2.plot(gt_data['timestamp'], error_p_m, color = plot_color[result_string[n]], linewidth=line_width, label=result_string[n])
+	ax2.fill_between(gt_data['timestamp'], error_p_m - error_p_s/2,
+					 error_p_m + error_p_s/2, color = plot_color[result_string[n]], alpha = 0.5)
 
 
 ax1.set(ylabel='rotation RMSE [deg]')
-ax1.set_ylim(-0.2, 1.3)
+# ax1.set_ylim(-0.2, 3)
 ax2.set(ylabel='position RMSE [m]')
 ax2.set(xlabel='time [s]')
 ax2.legend(loc = 1)
-ax2.set_ylim(-0.01, 0.4)
+# ax2.set_ylim(-0.01, 0.4)
 plt.show()
 
 

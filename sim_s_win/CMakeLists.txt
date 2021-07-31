@@ -29,8 +29,7 @@ target_link_libraries(sim_app_s_win
 
 add_executable(sim_opt_app_s_win
   sim.h
-        sim_opt_app_s_win.cc
-)
+        sim_opt_app_s_win.cc    )
 
 target_include_directories(sim_opt_app_s_win
   PUBLIC ${OpenCV_INCLUDE_DIRS}          # not the target style
