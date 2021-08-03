@@ -187,43 +187,43 @@ class ExpLandmarkSLAM {
   bool CreateTrajectory() {
 
     double T=0;
+    double s_len_ = duration_/(dt_*keyframe_rate_ratio_);
+    for (int i=0; i<s_len_; ++i) {
 
-    while (T <= duration_) {
+    Eigen::Matrix3d rot;
+    Eigen::Vector3d vel;
+    Eigen::Vector3d pos;
 
-      Eigen::Matrix3d rot;
-      Eigen::Vector3d vel;      
-      Eigen::Vector3d pos;
+    rot << cos(w_ * T), -sin(w_ * T), 0,
+         sin(w_ * T),  cos(w_ * T), 0,
+         0, 0, 1;
 
-      rot << cos(w_ * T), -sin(w_ * T), 0,
-             sin(w_ * T),  cos(w_ * T), 0,
-             0, 0, 1;
+    vel(0) = -r_ * w_ * sin(w_ * T);
+    vel(1) =  r_ * w_ * cos(w_ * T);
+    vel(2) = r_z_ * w_z_ * cos(w_z_ * T);
 
-      vel(0) = -r_ * w_ * sin(w_ * T);
-      vel(1) =  r_ * w_ * cos(w_ * T);
-      vel(2) = r_z_ * w_z_ * cos(w_z_ * T);
-
-      pos(0) = r_ * cos(w_ * T);
-      pos(1) = r_ * sin(w_ * T);
-      pos(2) = r_z_ * sin(w_z_ * T) + z_h_;
+    pos(0) = r_ * cos(w_ * T);
+    pos(1) = r_ * sin(w_ * T);
+    pos(2) = r_z_ * sin(w_z_ * T) + z_h_;
 
 
-      State* state_ptr = new State;
+    State* state_ptr = new State;
 
-      state_ptr->t_= T;
-      state_ptr->q_ = quat_positive(Eigen::Quaterniond(rot));
-      state_ptr->v_ = vel;
-      state_ptr->p_ = pos;
+    state_ptr->t_= T;
+    state_ptr->q_ = quat_positive(Eigen::Quaterniond(rot));
+    state_ptr->v_ = vel;
+    state_ptr->p_ = pos;
 
-      state_vec_.push_back(state_ptr);
+    state_vec_.push_back(state_ptr);
 
-      T = T + keyframe_rate_ratio_*dt_;
+    T = T + keyframe_rate_ratio_*dt_;
     }
 
     state_len_ = state_vec_.size();
 
     std::cout << "state_vec_ " << state_vec_.size() << std::endl;
     return true;
-  }
+    }
 
 
   bool CreateLandmark(Eigen::Rand::Vmt19937_64 urng) {

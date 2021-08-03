@@ -23,7 +23,7 @@ public:
 
     bool EM_step() {
 
-        size_t block_size = 300;
+        size_t block_size = 500;
 
         size_t T = 0; //1;
 
@@ -250,7 +250,7 @@ public:
             optimization_options.num_threads = 6;
             optimization_options.function_tolerance = 1e-20;
             optimization_options.parameter_tolerance = 1e-25;
-            optimization_options.max_num_iterations = 80; //100;
+            optimization_options.max_num_iterations = 60; //100;
 
             quat_parameterization_ptr = new ceres::QuaternionParameterization();
 
@@ -372,7 +372,7 @@ public:
             }
             else {
 
-                block_size = 300;
+                block_size = 500;
 
                 if (T+block_size > imu_vec_.size()) {
                     block_size = imu_vec_.size() - T;
@@ -393,7 +393,9 @@ int main(int argc, char **argv) {
     std::cout << "simulate OPT SLAM..." << std::endl;
 
     google::InitGoogleLogging(argv[0]);
-    Eigen::Rand::Vmt19937_64 urng{(unsigned int) time(0)};
+//    Eigen::Rand::Vmt19937_64 urng{(unsigned int) time(0)};
+    Eigen::Rand::Vmt19937_64 urng{};
+
     int num_real = atoi(argv[1]);
 
     for (size_t i = 0; i < num_real; ++i) {

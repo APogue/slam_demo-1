@@ -43,7 +43,7 @@ for l in range(len(result_string)):
 		for i in range(len(gt_data['p_x'])):
 			p_error_array[l, i, k] = math.sqrt( (gt_data['p_x'][i]-data['p_x'][i])**2 + (gt_data['p_y'][i]-data['p_y'][i])**2
 												 + (gt_data['p_z'][i]-data['p_z'][i])**2)
-			q_error_array[l, i, k] += quat_diff([data['q_w'][i], data['q_x'][i], data['q_y'][i], data['q_z'][i]],
+			q_error_array[l, i, k] = quat_diff([data['q_w'][i], data['q_x'][i], data['q_y'][i], data['q_z'][i]],
 											   [gt_data['q_w'][i], gt_data['q_x'][i], gt_data['q_y'][i], gt_data['q_z'][i]])
 
 
@@ -65,11 +65,11 @@ for n in range(len(result_string)):
 
 
 ax1.set(ylabel='rotation RMSE [deg]')
-# ax1.set_ylim(-0.2, 3)
+ax1.set_ylim(-0.2, 1)
 ax2.set(ylabel='position RMSE [m]')
 ax2.set(xlabel='time [s]')
 ax2.legend(loc = 1)
-# ax2.set_ylim(-0.01, 0.4)
+ax2.set_ylim(-0.01, .1)
 plt.show()
 
 

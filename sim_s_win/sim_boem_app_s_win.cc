@@ -262,7 +262,7 @@ class ExpLandmarkBoemSLAM: public ExpLandmarkSLAM {
       optimization_options.num_threads = 6;
       optimization_options.function_tolerance = 1e-20;
       optimization_options.parameter_tolerance = 1e-25;
-      optimization_options.max_num_iterations = 80; //100;
+      optimization_options.max_num_iterations = 60; //100;
 
       quat_parameterization_ptr = new ceres::QuaternionParameterization();
 

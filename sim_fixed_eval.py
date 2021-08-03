@@ -59,13 +59,13 @@ for k in range(num_realizations):
 		pb_error_array[i, k] = math.sqrt( (gt_data['p_x'][i]-boem_data['p_x'][i])**2 + (gt_data['p_y'][i]-boem_data['p_y'][i])**2
 											 + (gt_data['p_z'][i]-boem_data['p_z'][i])**2)
 
-		qdr_error_array[i,k] += quat_diff([dr_data['q_w'][i], dr_data['q_x'][i], dr_data['q_y'][i], dr_data['q_z'][i]],
+		qdr_error_array[i,k] = quat_diff([dr_data['q_w'][i], dr_data['q_x'][i], dr_data['q_y'][i], dr_data['q_z'][i]],
 									 [gt_data['q_w'][i], gt_data['q_x'][i], gt_data['q_y'][i], gt_data['q_z'][i]])
-		qo_error_array[i, k] += quat_diff([opt_data['q_w'][i], opt_data['q_x'][i], opt_data['q_y'][i], opt_data['q_z'][i]],
+		qo_error_array[i, k] = quat_diff([opt_data['q_w'][i], opt_data['q_x'][i], opt_data['q_y'][i], opt_data['q_z'][i]],
 								  [gt_data['q_w'][i], gt_data['q_x'][i], gt_data['q_y'][i], gt_data['q_z'][i]])
-		qe_error_array[i, k] += quat_diff([em_data['q_w'][i], em_data['q_x'][i], em_data['q_y'][i], em_data['q_z'][i]],
+		qe_error_array[i, k] = quat_diff([em_data['q_w'][i], em_data['q_x'][i], em_data['q_y'][i], em_data['q_z'][i]],
 										  [gt_data['q_w'][i], gt_data['q_x'][i], gt_data['q_y'][i], gt_data['q_z'][i]])
-		qb_error_array[i, k] += quat_diff([boem_data['q_w'][i], boem_data['q_x'][i], boem_data['q_y'][i], boem_data['q_z'][i]],
+		qb_error_array[i, k] = quat_diff([boem_data['q_w'][i], boem_data['q_x'][i], boem_data['q_y'][i], boem_data['q_z'][i]],
 										   [gt_data['q_w'][i], gt_data['q_x'][i], gt_data['q_y'][i], gt_data['q_z'][i]])
 
 dr_error_q = np.mean(qdr_error_array, axis=1)
@@ -82,22 +82,22 @@ def plot_no_std():
 	fig, (ax1, ax2) = plt.subplots(2)
 	fig.set_size_inches(fig_width, fig_height)
 	line_width = 1.2
-	ax1.plot(gt_data['timestamp'], dr_error_q, color = plot_color['dr'], linewidth=line_width, label='dead reckoning')
+	# ax1.plot(gt_data['timestamp'], dr_error_q, color = plot_color['dr'], linewidth=line_width, label='dead reckoning')
 	ax1.plot(gt_data['timestamp'], opt_error_q, color = plot_color['opt'], linewidth=line_width, label='opt.')
 	ax1.plot(gt_data['timestamp'], em_error_q, color = plot_color['em'], linewidth=line_width, label='EM')
 	ax1.plot(gt_data['timestamp'], boem_error_q, color = plot_color['boem'], linewidth=line_width, label='BOEM')
 	ax1.set(ylabel='rotation RMSE [deg]')
-	ax1.set_ylim(-0.2, 1.3)
+	# ax1.set_ylim(-0.2, 1.3)
 
 
-	ax2.plot(gt_data['timestamp'], dr_error_p, color = plot_color['dr'], linewidth=line_width, label='dr')
+	# ax2.plot(gt_data['timestamp'], dr_error_p, color = plot_color['dr'], linewidth=line_width, label='dr')
 	ax2.plot(gt_data['timestamp'], opt_error_p, color = plot_color['opt'], linewidth=line_width, label='opt.')
 	ax2.plot(gt_data['timestamp'], em_error_p, color = plot_color['em'], linewidth=line_width, label='EM')
 	ax2.plot(gt_data['timestamp'], boem_error_p, color = plot_color['boem'], linewidth=line_width, label='BOEM')
 	ax2.set(ylabel='position RMSE [m]')
 	ax2.set(xlabel='time [s]')
 	ax2.legend(loc = 1)
-	ax2.set_ylim(-0.01, 0.4)
+	# ax2.set_ylim(-0.01, 0.4)
 	return plt.show()
 
 
@@ -151,7 +151,7 @@ def plot_with_std():
 
 
 plot_no_std()
-plot_with_std()
+# plot_with_std()
 
 
 
