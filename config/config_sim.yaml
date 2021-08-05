@@ -11,7 +11,7 @@ keyframe_rate_ratio: 5
 
 trajectory:
   r: 5.5 # circle radius x-y plane
-  w: .46 # angular velocity, roughly 13.65 sec for a round
+  w: .46 # .46 angular velocity, roughly 13.65 sec for a round
   r_z: 0.25
   w_z: 1.748
   z_h: 0.0 # height of the uav
@@ -25,7 +25,7 @@ landmark_generation:
   box_xy: 2.0 # box offset from the circle
   box_z: 1 # box offset from uav height
   
-landmark_init_noise: 0.01 #0.0005
+landmark_init_noise: 0.05 # 0.01 0.0005
 
 camera:
   T_bc:

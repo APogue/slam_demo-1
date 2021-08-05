@@ -23,7 +23,7 @@ class ExpLandmarkEmSLAM: public ExpLandmarkSLAM {
 
     bool EM_step() {
 
-        size_t block_size = 500;
+        size_t block_size = 400;
 
         size_t T = 0; //1;
 
@@ -334,7 +334,7 @@ class ExpLandmarkEmSLAM: public ExpLandmarkSLAM {
             }
             else {
 
-                block_size = 500;
+                block_size = 400;
 
                 if (T+block_size > imu_vec_.size()) {
                     block_size = imu_vec_.size() - T;

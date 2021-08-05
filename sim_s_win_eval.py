@@ -65,11 +65,11 @@ for n in range(len(result_string)):
 
 
 ax1.set(ylabel='rotation RMSE [deg]')
-ax1.set_ylim(-0.2, 1)
+# ax1.set_ylim(-0.2, 1)
 ax2.set(ylabel='position RMSE [m]')
 ax2.set(xlabel='time [s]')
 ax2.legend(loc = 1)
-ax2.set_ylim(-0.01, .1)
+# ax2.set_ylim(-0.01, .1)
 plt.show()
 
 
