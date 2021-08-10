@@ -39,243 +39,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79909e2e-9624-4e47-b74e-699440f6a2b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/eval/exp_bar_plot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eval/sim_easy_eval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eval/sim_easy_traj.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eval/sim_exp_window_eval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eval/sim_fixed_eval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eval/sim_sliding_window_eval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eval/visualization/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/EigenRand/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/AUTHORS.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/BUILD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/COPYING.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/ChangeLog.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/INSTALL.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/WORKSPACE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/appveyor.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/bazel/gflags.bzl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/README_runtime.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/cmake_uninstall.cmake.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/config.cmake.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/execute_test.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/package.cmake.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/package.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/utils.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/cmake/version.cmake.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/defines.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags_completions.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags_completions.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags_completions.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags_declare.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags_ns.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/gflags_reporting.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/mutex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/util.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/windows_port.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/src/windows_port.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/config/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/config/main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/flagfile.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/flagfile.2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/flagfile.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/gflags_build.py.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/gflags_declare_flags.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/gflags_declare_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/gflags_strip_flags_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/gflags_strip_flags_test.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/gflags_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/gflags_unittest_flagfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/nc/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/gflags/test/nc/gflags_nc.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/.clang-format" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/.codedocs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/WORKSPACE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/appveyor.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/docs/Breaking-Changes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/docs/How-To-Emit-YAML.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/docs/How-To-Parse-A-Document-(Old-API).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/docs/Strings.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/docs/Tutorial.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/docs/_config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/docs/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/anchor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/binary.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/contrib/anchordict.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/contrib/graphbuilder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/depthguard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/dll.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/emitfromevents.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/emitter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/emitterdef.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/emittermanip.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/emitterstyle.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/eventhandler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/exceptions.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/mark.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/convert.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/iterator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/iterator_fwd.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/memory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/node.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/node_data.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/node_iterator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/detail/node_ref.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/emit.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/iterator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/node.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/parse.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/ptr.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/node/type.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/noexcept.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/null.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/ostream_wrapper.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/parser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/stlemitter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/traits.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/include/yaml-cpp/yaml.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/install.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/binary.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/collectionstack.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/contrib/graphbuilder.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/contrib/graphbuilderadapter.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/contrib/graphbuilderadapter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/contrib/yaml-cpp.natvis" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/contrib/yaml-cpp.natvis.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/convert.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/depthguard.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/directives.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/directives.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/emit.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/emitfromevents.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/emitter.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/emitterstate.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/emitterstate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/emitterutils.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/emitterutils.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/exceptions.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/exp.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/exp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/indentation.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/memory.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/node.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/node_data.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/nodebuilder.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/nodebuilder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/nodeevents.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/nodeevents.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/null.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/ostream_wrapper.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/parse.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/parser.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/ptr_vector.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/regex_yaml.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/regex_yaml.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/regeximpl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/scanner.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/scanner.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/scanscalar.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/scanscalar.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/scantag.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/scantag.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/scantoken.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/setting.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/simplekey.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/singledocparser.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/singledocparser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/stream.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/stream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/streamcharsource.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/stringsource.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/tag.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/tag.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/src/token.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/yaml-cpp-config.cmake.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/yaml-cpp/yaml-cpp.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/easy/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/easy/sim.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/exp_window/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/exp_window/app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/exp_window/boem_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/exp_window/em_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/exp_window/opt_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/exp_window/sim.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/fixed/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/fixed/app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/fixed/boem_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/fixed/em_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/fixed/opt_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/fixed/sim.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/sliding_window/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/sliding_window/app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/sliding_window/boem_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/sliding_window/em_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim/sliding_window/opt_app.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim_easy_run.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim_exp_window_run.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sim_sliding_window_run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config_sim.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config_sim.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exp/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp/backend.h" beforeDir="false" afterPath="$PROJECT_DIR$/exp/backend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp/backend_boem_app.cc" beforeDir="false" afterPath="$PROJECT_DIR$/exp/backend_boem_app.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp/backend_em_app.cc" beforeDir="false" afterPath="$PROJECT_DIR$/exp/backend_em_app.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp/backend_opt_app.cc" beforeDir="false" afterPath="$PROJECT_DIR$/exp/backend_opt_app.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval/exp_eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp_run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/exp_run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/Core.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/Core.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/Dists/Basic.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/Dists/Basic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/Dists/Discrete.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/Dists/Discrete.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/Dists/GammaPoisson.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/Dists/GammaPoisson.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/Dists/NormalExp.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/Dists/NormalExp.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/EigenRand" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/EigenRand" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/Macro.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/Macro.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/MorePacketMath.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/MorePacketMath.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/MvDists/Multinomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/MvDists/Multinomial.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/MvDists/MvNormal.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/MvDists/MvNormal.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/PacketFilter.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/PacketFilter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/PacketRandomEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/PacketRandomEngine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/RandUtils.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/RandUtils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/EigenRand/doc.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/EigenRand/EigenRand/doc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sim/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim/sim.h" beforeDir="false" afterPath="$PROJECT_DIR$/sim/sliding_window/sim.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim/sim_app.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim/easy/app.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim/sim_boem_app.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim/easy/boem_app.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim/sim_em_app.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim/easy/em_app.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim/sim_opt_app.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sim/easy/opt_app.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_eval.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim_fixed_run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sim_fixed_run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/reprojection_error_test.cc" beforeDir="false" afterPath="$PROJECT_DIR$/test/reprojection_error_test.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/reprojection_error_test_mc.cc" beforeDir="false" afterPath="$PROJECT_DIR$/test/reprojection_error_test_mc.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_fixed/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_fixed/sim.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_fixed/sim_boem_fixed.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_fixed/sim_em_fixed.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_fixed/sim_opt_fixed.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_s_win/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_s_win/sim.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_s_win/sim_app_s_win.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_s_win/sim_boem_app_s_win.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_s_win/sim_em_app_s_win.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_s_win/sim_opt_app_s_win.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim_app_win.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim_boem_win.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim_em_win.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sim_win/sim_opt_win.cc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,6 +110,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.backend_boem_app">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EigenRand" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="EigenRand" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -551,6 +338,7 @@
       <workItem from="1628188368680" duration="964000" />
       <workItem from="1628604265202" duration="744000" />
       <workItem from="1628605018905" duration="244000" />
+      <workItem from="1628605364059" duration="1673000" />
     </task>
     <servers />
   </component>
