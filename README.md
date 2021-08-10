@@ -6,27 +6,26 @@ This project provides a minimal SLAM architecture in order to study the underlyi
 
 You will need to install the following dependencies,
 
-* CMake,
-
-        sudo apt-get install cmake
-
-* Eigen3,
-
-        sudo apt-get install libeigen3-dev
-        
+* OpenCV
+* CMake
+* Eigen3        
 * ceres
 
 ## Build instruction
 
-To build this project, just follow standard CMake procedure.
+To build this project, just follow the standard CMake procedure.
 ```
 mkdir build
 cd build
-cmake [-DBUILD_TEST=OFF] ..
+cmake ..
 cmake --build .
 ```
 
+## Usage
 
-## Evaluation
+### Simulations
 
-We use `perf` to measure the execution time of each algorithm.
+The shell scripts provide a guildline on how to use the simulations. 
+
+
+### Experiments on EuRoC datasets

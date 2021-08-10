@@ -1,11 +1,11 @@
-cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.18.0)
 project(slam_demo)
 
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-option(BUILD_TEST "build test programs" ON)
-
+option(BUILD_SHARED_LIBS "build shared libraries" ON)
 
 
 find_package(OpenCV REQUIRED)
@@ -18,13 +18,10 @@ find_package(Ceres REQUIRED)
 
 
 add_subdirectory(lib)
+add_subdirectory(external)
+
 add_subdirectory(sim)
-add_subdirectory(sim_fixed)
-add_subdirectory(sim_win)
-add_subdirectory(sim_s_win)
 add_subdirectory(exp)
 
 
-if(BUILD_TEST)
-  add_subdirectory(test)
-endif(BUILD_TEST)
+# add_subdirectory(test)
