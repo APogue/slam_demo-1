@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 DURATION="50"
 TRIALS="5"   # 50
 

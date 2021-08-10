@@ -333,11 +333,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="backend_boem_app" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_demo" TARGET_NAME="backend_boem_app" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="slam_demo" RUN_TARGET_NAME="backend_boem_app">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -555,6 +550,7 @@
       <workItem from="1628016962043" duration="679000" />
       <workItem from="1628188368680" duration="964000" />
       <workItem from="1628604265202" duration="744000" />
+      <workItem from="1628605018905" duration="244000" />
     </task>
     <servers />
   </component>
